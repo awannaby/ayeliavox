@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AYELIAVOX — Local AI Podcast Studio</title>
+<meta name="description" content="Turn scripts into finished multi-voice podcasts on your own computer. No cloud. No subscription. Windows and Apple Silicon Mac. Watch the demo and visit ayeliavox.com.">
+<meta name="theme-color" content="#0b0c0f">
+<meta property="og:title" content="AYELIAVOX — Local AI Podcast Studio">
+<meta property="og:description" content="Your script becomes a finished podcast. 100% local. No cloud, no subscription.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- ============ EDIT YOUR LINKS HERE (they are used by every button on the page) ============ -->
+<script>
+window.AYV = {
+  site:    "https://www.ayeliavox.com/?utm_source=github&utm_medium=pages&utm_campaign=showcase",
+  download:"https://www.ayeliavox.com/download/?utm_source=github&utm_medium=pages&utm_campaign=showcase",
+  channel: "https://youtu.be/Fgma2g_d-HM?si=v7QJy4heVnyhWjIW", // <- replace with your channel URL, e.g. https://www.youtube.com/@yourhandle
+  videoId: "Fgma2g_d-HM"
+};
+</script>
+
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="bgwave" aria-hidden="true"></canvas>
+<div class="glow" id="glow" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#top" aria-label="AYELIAVOX home">
+    <span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+    <span class="bn">AYELIA<em>VOX</em></span>
+  </a>
+  <nav aria-label="Main">
+    <a href="#demo">Demo</a><a href="#features">Features</a><a href="#cloning">Voice cloning</a><a href="#editions">Editions</a><a href="#faq">FAQ</a>
+    <a class="btn sm" data-go="site" href="#" target="_blank" rel="noopener">ayeliavox.com</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <p class="eyebrow">FREE FOR LIFE · WINDOWS + MAC APPLE SILICON</p>
+  <h1 id="wave" aria-label="Turn your script into a finished podcast.">Turn your script into<br>a finished podcast.</h1>
+  <p class="lead">Local AI voices, voice cloning, multilingual dialogue, music and mastering.<br><span class="gold">All on your own computer. No cloud. No subscription. No credits.</span></p>
+  <div class="cta">
+    <a class="btn big" data-go="download" href="#" target="_blank" rel="noopener">Try AYELIAVOX free <span aria-hidden="true">→</span></a>
+    <a class="btn big ghost" data-go="channel" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8zM9.8 15.1V8.9l5.4 3.1z"/></svg> Watch on YouTube</a>
+  </div>
+  <ul class="chips" aria-label="Highlights">
+    <li>Free Windows download</li><li>No credit card</li><li>Unlimited local generation</li><li>1 cloned voice included</li><li>Lifetime licenses, no subscription</li>
+  </ul>
+  <a class="scroll" href="#demo" aria-label="Scroll to the demo"><span></span></a>
+</section>
+
+<section class="marq" aria-label="Engines and languages"><div><span>PIPER</span><span>KOKORO</span><span>CHATTERBOX</span><span>QWEN3-TTS</span><span>MICROSOFT / AZURE</span><span>BONJOUR · FR</span><span>HELLO · EN</span><span>BUONGIORNO · IT</span><span>こんにちは · JA</span><span>HOLA · ES</span><span>HALLO · DE</span><span>PIPER</span><span>KOKORO</span><span>CHATTERBOX</span><span>QWEN3-TTS</span><span>MICROSOFT / AZURE</span><span>BONJOUR · FR</span><span>HELLO · EN</span><span>BUONGIORNO · IT</span><span>こんにちは · JA</span><span>HOLA · ES</span><span>HALLO · DE</span></div></section>
+
+<section class="sec" id="demo">
+  <h2 class="rv">See it. <em>Hear it.</em></h2>
+  <p class="sub rv">Watch AYELIAVOX turn a script into a finished production, on a normal computer, with no cloud.</p>
+  <div class="player rv" id="player">
+    <button class="play" id="playBtn" aria-label="Play the demo video">
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="pb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="pt">Play the demo</span>
+      <small>Loads from YouTube (privacy-enhanced mode) when you click</small>
+    </button>
+  </div>
+  <p class="center rv"><a class="btn ghost" data-go="channel" href="#" target="_blank" rel="noopener">More videos on my YouTube channel →</a></p>
+</section>
+
+<section class="sec" id="features">
+  <p class="eyebrow center rv">WHY CREATORS SWITCH</p>
+  <h2 class="rv">Your studio.<br><em>Your machine. Your rules.</em></h2>
+  <p class="sub rv">Everything you need to produce podcasts, audiobooks and voice-overs, without renting it by the month.</p>
+  <div class="grid">
+    <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Local and private</h3><p>The local engines run on your own computer. Your scripts, voices and audio stay with you.</p></article>
+    <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 8l8 8M16 8l-8 8"/></svg></div><h3>No subscription, no credits</h3><p>Lifetime licenses with a one-time payment. The Free edition stays free, with no credit card.</p></article>
+    <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M7 8v8M17 7v10M2.5 11v2M21.5 11v2"/></svg></div><h3>Unlimited audio generation</h3><p>No tokens, no minute meter, no quota. Produce as many episodes as you want.</p></article>
+    <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div><h3>Up to 10 voices, 10 languages</h3><p>Write dialogue with many speakers and mix languages inside one production script.</p></article>
+    <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><h3>Direct the voice</h3><p>With Chatterbox and Qwen3-TTS, steer tone in plain language and add laughs, sighs or coughs.</p></article>
+    <article class="card rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 18V9M9 18V5M14 18v-7M19 18V8"/></svg></div><h3>Studio finish built in</h3><p>Background music, automatic ducking, loudness and True Peak control, ready to publish.</p></article>
+  </div>
+  <ul class="chips rv" aria-label="Pro tools"><li>JOB STUDIO · multi-speaker jobs</li><li>ASS STUDIO · subtitles</li><li>Production Report · PDF with SHA-256</li><li>STEMS and pro exports</li></ul>
+</section>
+
+<section class="sec" id="cloning">
+  <div class="stage rv">
+    <div class="st-t">
+      <p class="eyebrow">VOICE CLONING</p>
+      <h2>Your voice.<br><em>Cloned in 30 seconds.</em></h2>
+      <p>Give AYELIAVOX about 30 seconds of a voice you are authorized to use, and it reads your scripts, in several languages. Cloning runs locally on your computer.</p>
+      <p><strong>1 personal cloned voice is included in every edition, even Free.</strong> Need more? The Business edition plus the Voice Cloning add-on unlocks an unlimited library of authorized voices.</p>
+      <a class="btn" data-go="download" href="#" target="_blank" rel="noopener">Clone my voice free →</a>
+      <p class="note">Clone only your own voice or a voice you are authorized to use. Cloning remains your sole responsibility. On Windows, Chatterbox needs an NVIDIA RTX GPU.</p>
+    </div>
+    <div class="st-v">
+      <div class="ring" aria-hidden="true"><svg viewBox="0 0 120 120"><circle class="a" cx="60" cy="60" r="52"/><circle class="b" id="ringb" cx="60" cy="60" r="52"/></svg><b id="cnt">0 s</b></div>
+      <canvas id="clwave" width="560" height="120" aria-hidden="true"></canvas>
+      <ul class="demo" aria-label="Same cloned voice, three languages">
+        <li><b>FR</b>Bonjour et bienvenue dans AYELIAVOX.</li>
+        <li><b>EN</b>Hello and welcome to AYELIAVOX.</li>
+        <li><b>IT</b>Buongiorno e benvenuti in AYELIAVOX.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="how">
+  <p class="eyebrow center rv">HOW IT WORKS</p>
+  <h2 class="rv">Script to finished audio <em>in 3 steps</em></h2>
+  <ol class="steps">
+    <li class="rv"><b>1</b><h3>Write your script</h3><p>Paste or write your text, and assign voices and languages to each speaker.</p></li>
+    <li class="rv"><b>2</b><h3>Choose voices and sound</h3><p>Pick an engine, add music and let ducking and mastering do the rest.</p></li>
+    <li class="rv"><b>3</b><h3>Generate locally, export</h3><p>Produce your audio on your computer and export it for your platform or editor.</p></li>
+  </ol>
+</section>
+
+<section class="sec" id="editions">
+  <p class="eyebrow center rv">EDITIONS</p>
+  <h2 class="rv">Start free.<br><em>Upgrade when you need more.</em></h2>
+  <p class="sub rv">Every paid edition is a one-time lifetime license. See the exact prices on the official site.</p>
+  <div class="eds">
+    <article class="ed rv"><h3>Free</h3><p class="tag">Free for life</p><ul><li>Unlimited audio generation</li><li>1 voice per production</li><li>1 personal cloned voice included</li><li>No credits, no time limit</li></ul></article>
+    <article class="ed rv"><h3>Studio</h3><p class="tag">Lifetime license</p><ul><li>Multi-voice dialogue</li><li>Ambient music and ducking</li><li>Advanced mastering and presets</li><li>Batch up to 2 files per run</li></ul></article>
+    <article class="ed rv"><h3>Pro</h3><p class="tag">Lifetime license</p><ul><li>Everything in Studio</li><li>STEMS audio</li><li>JSON, Markdown, SRT, WebVTT, ASS exports</li><li>Batch up to 10 files per run</li></ul></article>
+    <article class="ed hot rv"><h3>Business</h3><p class="tag">Lifetime license</p><ul><li>Everything in Pro</li><li>FCPXML and AAF exports</li><li>Batch up to 25 files per run</li><li>Unlimited Voice Cloning add-on available</li></ul></article>
+  </div>
+  <p class="center rv"><a class="btn big" data-go="site" href="#" target="_blank" rel="noopener">See editions and prices →</a></p>
+  <p class="good rv"><b>Good to know.</b> AYELIAVOX runs on Windows and on Apple Silicon Macs (M1 and later). Piper and Kokoro work on the CPU, with no dedicated graphics card. On Windows, Chatterbox and Qwen3-TTS need a CUDA-compatible NVIDIA RTX GPU. Microsoft / Azure is an optional cloud engine that needs your own API key.</p>
+</section>
+
+<section class="sec narrow" id="faq">
+  <p class="eyebrow center rv">QUESTIONS</p>
+  <h2 class="rv">Straight <em>answers.</em></h2>
+  <div class="faq rv">
+    <details><summary>Is the Free edition really free?</summary><p>Yes. It is free for life, with no credit card, no credits and no time limit. It includes unlimited audio generation, 1 voice per production and 1 personal cloned voice.</p></details>
+    <details><summary>Does it work without the cloud?</summary><p>The local engines (Piper, Kokoro, Chatterbox and Qwen3-TTS) produce audio on your computer. Microsoft / Azure is an optional cloud engine that you enable with your own API key.</p></details>
+    <details><summary>Is there a subscription?</summary><p>No. Paid editions and modules are one-time lifetime licenses, and the Free edition has no fee.</p></details>
+    <details><summary>Which computers are supported?</summary><p>Windows PCs and Apple Silicon Macs (M1 and later). On Windows, Chatterbox and Qwen3-TTS require an NVIDIA RTX GPU.</p></details>
+    <details><summary>Can I clone any voice?</summary><p>Only your own voice, or a voice you are authorized to use. Cloning remains your responsibility.</p></details>
+  </div>
+</section>
+
+<section class="sec" id="links">
+  <p class="eyebrow center rv">FIND ME</p>
+  <h2 class="rv">Start <em>here.</em></h2>
+  <p class="sub rv">Everything lives in three places.</p>
+  <div class="hub">
+    <a class="hl rv" data-go="site" href="#" target="_blank" rel="noopener"><span class="hi"><i></i><i></i><i></i><i></i><i></i></span><b>ayeliavox.com</b><span>The official website: features, editions, pricing.</span><em>Visit the site →</em></a>
+    <a class="hl rv" data-go="download" href="#" target="_blank" rel="noopener"><span class="hi"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg></span><b>Free download</b><span>The free edition for Windows. No credit card.</span><em>Get it free →</em></a>
+    <a class="hl rv" data-go="channel" href="#" target="_blank" rel="noopener"><span class="hi"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><b>YouTube</b><span>Demos, tutorials and behind-the-scenes.</span><em>Watch &amp; subscribe →</em></a>
+  </div>
+</section>
+
+<section class="final">
+  <p class="eyebrow rv">AYELIAVOX</p>
+  <h2 class="rv">Your next episode<br><em>starts here.</em></h2>
+  <p class="sub rv">Download AYELIAVOX free and hear your first script come alive on your own computer.</p>
+  <div class="cta rv"><a class="btn big" data-go="download" href="#" target="_blank" rel="noopener">Try AYELIAVOX free <span aria-hidden="true">→</span></a><a class="btn big ghost" data-go="site" href="#" target="_blank" rel="noopener">Visit ayeliavox.com</a></div>
+</section>
+</main>
+
+<footer>
+  <p>© <span id="yr">2026</span> AWANNABY SARL · AYELIAVOX Podcast Studio · developed in France</p>
+  <p class="fine">Voice cloning: the rights of the person cloned are required, under your sole responsibility. All product names belong to their respective owners.</p>
+</footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
